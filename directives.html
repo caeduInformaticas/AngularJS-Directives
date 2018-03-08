@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Angular JS Tutorial- Data Binding Methods</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="directives.css">
+      <!-- Angular app linking -->
+      <script type = "text/javascript" src="directives.js"></script> 
+   </head>
+   
+   <!-- Custom App Declaration-->
+   <body ng-app= "DirApp">
+      
+	  <!-- rendering data from model. -->
+	  <script type="text/ng-template" id = "your-custom-dir">
+         <h2>{{response}}</h2>
+      </script>
+	  
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+         <div class="container">
+            <img src="logo.png" alt="Valuebound Inc">
+         </div>
+      </nav>
+	  
+      <!-- Page Content -->
+      <!-- Custom module Controller -->
+      <div class="container" ng-controller="DirApCntrl">
+         <div class="row">
+            <div class="col-lg-4">
+               <strong>Rendering with custom Directives</strong></br>              
+               <my-custom-dir></my-custom-dir>
+            </div>
+            <div class="col-lg-4">
+               <strong>Rendering with custom Directives templateURL</strong></br>
+               <div your-custom-dir></div>
+            </div>
+            <div class="col-lg-4">
+               <strong>Custom Directives with 'restrict' Keyword</strong></br> 
+			   <div>used pattern A/E/C</div>
+               <div my-custom-dir-a></div>
+               <br>
+               <div class="my-custom-dir-c"></div>
+               <br>
+               <my-custom-dir-e></my-custom-dir-e>
+               <br>			 
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
